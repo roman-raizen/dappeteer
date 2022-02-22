@@ -159,6 +159,8 @@ async function closeHomeScreen(browser: puppeteer.Browser): Promise<puppeteer.Pa
 }
 
 async function closeNotificationPage(browser: puppeteer.Browser): Promise<void> {
+  // why?
+  return
   browser.on('targetcreated', async (target) => {
     if (target.url().match('chrome-extension://[a-z]+/notification.html')) {
       try {
